@@ -24,7 +24,7 @@ if st.button('Say hello'):
     service=service,
     )
     driver.get("https://lol.qq.com/tft/#/rank/tier")
-    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+    driver.implicitly_wait(20)
     df_cn=pd.DataFrame([],columns=['Nick','PDL','Jogos'])
     for i in range(0,5):
         cn_list=driver.find_element_by_xpath('//*[@id="appMain"]/div[1]/div/div[2]/div[2]')
