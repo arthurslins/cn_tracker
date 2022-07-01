@@ -15,7 +15,7 @@ from webdriver_manager.firefox import GeckoDriverManager
 df_cn=pd.read_csv('df_cn.csv')
 if st.button('Say hello'):
     st.write('Why hello there') 
-    driver = webdriver.Chrome()
+    driver = webdriver.Firefox()
     driver.get("https://lol.qq.com/tft/#/rank/tier")
     df_cn=pd.DataFrame([],columns=['Nick','PDL','Jogos'])
     for i in range(0,5):
