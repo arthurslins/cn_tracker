@@ -34,7 +34,7 @@ if st.button('Clica para atualizar sa porra'):
     df_cn=pd.DataFrame([],columns=['Nick','PDL','Jogos','link'])
     for i in range(0,10):
         cn_list=driver.find_elements(by=By.CLASS_NAME,value='nickname')
-        cn_list2=cn_list.text.split('%\n')
+        cn_list2=cn_list.split('%\n')
         del cn_list2[1::2]
         cn_list3=[]
         for i in range(0,len(cn_list2)):
