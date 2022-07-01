@@ -32,5 +32,5 @@ if st.button('Say hello'):
        
         st.dataframe(df_cn)
         next_page=driver.find_element_by_xpath('//*[@id="appMain"]/div[1]/div/div[2]/div[3]/ul/li[9]')
-        st.write
+       
         next_page.click()
