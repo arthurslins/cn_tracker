@@ -52,7 +52,7 @@ if st.button('Clica para atualizar sa porra'):
             driver.back()
                                    
                                    
-        df_cn=pd.concat([df_cn,pd.DataFrame(cn_list3,columns=['Nick','PDL','Jogos','link'])])
+        df_cn=pd.concat([df_cn,pd.DataFrame(cn_list3,columns=['Nick','PDL','Jogos'])])
         df_cn['link'] = urls
         
         
