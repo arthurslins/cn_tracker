@@ -54,7 +54,8 @@ if st.button('Clica para atualizar sa porra'):
             url_list[i].click()
             urls.append(driver.current_url)
             driver.back()
-                                   
+
+        st.write(cn_list3)                           
         df_prev=pd.DataFrame(cn_list3,columns=['Nick','PDL','Jogos'])
         df_prev['link'] = urls
         df_cn=pd.concat([df_cn,df_prev])
