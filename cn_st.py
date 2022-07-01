@@ -19,7 +19,7 @@ service = Service(GeckoDriverManager().install())
 df_cn=pd.read_csv('df_cn.csv')
 df_cn2=pd.read_csv('parcial.csv')
 df_cn2.drop('Unnamed: 0',axis=1,inplace=True)
-st.write(df_cn2,unsafe_allow_html=True)
+# st.write(df_cn2,unsafe_allow_html=True)
 
 if st.button('Clica para atualizar sa porra'):
     st.write('espera um cado fião') 
@@ -28,7 +28,7 @@ if st.button('Clica para atualizar sa porra'):
     # driver = webdriver.Chrome()
    
     driver.get("https://lol.qq.com/tft/#/rank/tier")
-    driver.implicitly_wait(20)
+    # driver.implicitly_wait(20)
 
 
     df_cn=pd.DataFrame([],columns=['Nick','PDL','Jogos','link'])
