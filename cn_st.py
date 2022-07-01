@@ -18,6 +18,7 @@ firefoxOptions.add_argument("--headless")
 
 df_cn=pd.read_csv('df_cn.csv')
 df_cn2=pd.read_csv('parcial.csv')
+st.write(df_cn2,unsafe_allow_html=True)
 
 if st.button('Clica para atualizar sa porra'):
     st.write('espera um cado fião') 
