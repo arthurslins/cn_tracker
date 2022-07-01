@@ -32,7 +32,7 @@ if st.button('Clica para atualizar sa porra'):
 
 
     df_cn=pd.DataFrame([],columns=['Nick','PDL','Jogos','link'])
-    for i in range(0,8):
+    for i in range(0,10):
         cn_list=driver.find_element('xpath','//*[@id="appMain"]/div[1]/div/div[2]/div[2]')
         cn_list2=cn_list.text.split('%\n')
         del cn_list2[1::2]
@@ -63,7 +63,7 @@ if st.button('Clica para atualizar sa porra'):
         
        
         
-        next_page=driver.find_element('xpath','//*[@id="appMain"]/div[1]/div/div[2]/div[3]/ul/li[9]')
+        next_page=driver.find_element(by=By.CLASS_NAME,value='page-item')
        
         next_page.click()
     df_cn.reset_index(drop=True,inplace=True)
