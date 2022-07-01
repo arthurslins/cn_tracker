@@ -19,8 +19,8 @@ df_cn=pd.read_csv('df_cn.csv')
 
 if st.button('Clica para atualizar sa porra'):
     st.write('espera um cado fião') 
-    driver = webdriver.Firefox( firefox_binary=binary, firefox_options=opts, executable_path='/path/to/geckodriver'
-    )
+    driver = webdriver.Firefox(firefox_binary=binary, firefox_options=opts)
+   
     driver.get("https://lol.qq.com/tft/#/rank/tier")
     driver.implicitly_wait(20)
 
