@@ -27,7 +27,7 @@ if st.button('Say hello'):
     driver.implicitly_wait(20)
     df_cn=pd.DataFrame([],columns=['Nick','PDL','Jogos'])
     for i in range(0,5):
-        cn_list=driver.find_elements('xpath','//*[@id="appMain"]/div[1]/div/div[2]/div[2]')
+        cn_list=driver.find_element('xpath','//*[@id="appMain"]/div[1]/div/div[2]/div[2]')
         cn_list2=cn_list.text.split('%\n')
         del cn_list2[1::2]
         cn_list3=[]
