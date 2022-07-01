@@ -26,7 +26,7 @@ if st.button('Clica para atualizar sa porra'):
     driver.get("https://lol.qq.com/tft/#/rank/tier")
     driver.implicitly_wait(20)
     df_cn=pd.DataFrame([],columns=['Nick','PDL','Jogos'])
-    for i in range(0,5):
+    for i in range(0,40):
         cn_list=driver.find_element('xpath','//*[@id="appMain"]/div[1]/div/div[2]/div[2]')
         cn_list2=cn_list.text.split('%\n')
         del cn_list2[1::2]
@@ -53,3 +53,17 @@ if st.button('Clica para atualizar sa porra'):
     df_cn.index+=1
     df_cn.to_csv('df.cn.csv',index=False)
     st.dataframe(df_cn)
+    @st.cache
+    def convert_df(df):
+       return df.to_csv().encode('utf-8')
+
+
+    csv = convert_df(df)
+
+    st.download_button(
+       "Press to Download",
+       csv,
+       "file.csv",
+       "text/csv",
+       key='download-csv'
+    )
