@@ -26,8 +26,7 @@ if st.button('Clica para atualizar sa porra'):
     driver.get("https://lol.qq.com/tft/#/rank/tier")
     driver.implicitly_wait(20)
 
-    urls.append(driver.current_url)
-    driver.back()
+
     df_cn=pd.DataFrame([],columns=['Nick','PDL','Jogos','link'])
     for i in range(0,10):
         cn_list=driver.find_element('xpath','//*[@id="appMain"]/div[1]/div/div[2]/div[2]')
@@ -49,6 +48,8 @@ if st.button('Clica para atualizar sa porra'):
         urls=[]
         for i in range(0,10):
             url_list[i].click()
+            urls.append(driver.current_url)
+            driver.back()
                                    
                                    
         df_cn=pd.concat([df_cn,pd.DataFrame(cn_list3,columns=['Nick','PDL','Jogos','link'])])
