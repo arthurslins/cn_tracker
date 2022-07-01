@@ -14,14 +14,16 @@ from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
 firefoxOptions = Options()
 firefoxOptions.add_argument("--headless")
-service = Service(GeckoDriverManager().install())
+# service = Service(GeckoDriverManager().install())
 
 df_cn=pd.read_csv('df_cn.csv')
+df_cn2=pd.read_csv('parcial.csv')
 
 if st.button('Clica para atualizar sa porra'):
     st.write('espera um cado fião') 
-    driver = webdriver.Firefox(options=firefoxOptions,
-    service=service)
+    # driver = webdriver.Firefox(options=firefoxOptions,
+    # service=service)
+    driver = webdriver.Chrome()
    
     driver.get("https://lol.qq.com/tft/#/rank/tier")
     driver.implicitly_wait(20)
