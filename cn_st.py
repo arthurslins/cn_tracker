@@ -63,9 +63,9 @@ if st.button('Clica para atualizar sa porra'):
         
        
         
-        next_page=driver.find_element(by=By.CLASS_NAME,value='page-item')
+        next_page=driver.find_elements(by=By.CLASS_NAME,value='page-item')
        
-        next_page.click()
+        next_page[-2].click()
     df_cn.reset_index(drop=True,inplace=True)
     df_cn.index+=1
     df_cn.to_csv('df.cn.csv',index=False)
