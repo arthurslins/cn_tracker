@@ -43,9 +43,11 @@ if st.button('Say hello'):
             del cn_list3[i][1]
             del cn_list3[i][3]
         df_cn=pd.concat([df_cn,pd.DataFrame(cn_list3,columns=['Nick','PDL','Jogos'])])
-        df_cn.to_csv('df.cn.csv',index=False)
+        
        
-        st.dataframe(df_cn)
+        
         next_page=driver.find_element('xpath','//*[@id="appMain"]/div[1]/div/div[2]/div[3]/ul/li[9]')
        
         next_page.click()
+    df_cn.to_csv('df.cn.csv',index=False)
+    st.dataframe(df_cn)
