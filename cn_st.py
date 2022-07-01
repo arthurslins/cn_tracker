@@ -16,6 +16,7 @@ firefoxOptions.add_argument("--headless")
 service = Service(GeckoDriverManager().install())
 
 df_cn=pd.read_csv('df_cn.csv')
+WebDriverWait(driver, 10)
 if st.button('Say hello'):
     st.write('Why hello there') 
     driver = webdriver.Firefox(
