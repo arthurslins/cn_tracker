@@ -17,8 +17,8 @@ service = Service(GeckoDriverManager().install())
 
 df_cn=pd.read_csv('df_cn.csv')
 
-if st.button('Say hello'):
-    st.write('Why hello there') 
+if st.button('Clica para atualizar sa porra'):
+    st.write('espera um cado fião') 
     driver = webdriver.Firefox(
     options=firefoxOptions,
     service=service,
