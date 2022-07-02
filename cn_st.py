@@ -22,7 +22,8 @@ df_cn2.drop('Unnamed: 0',axis=1,inplace=True)
 # st.write(df_cn2,unsafe_allow_html=True)
 
 if st.button('Clica para atualizar sa porra'):
-    st.write('espera um cado fião') 
+    st.write('espera um cado fião')
+    
     driver = webdriver.Firefox(options=firefoxOptions,
     service=service)
     # driver = webdriver.Chrome()
@@ -32,6 +33,7 @@ if st.button('Clica para atualizar sa porra'):
 
     
     df_cn=pd.DataFrame([],columns=['Nick','PDL','Jogos','link'])
+    pag=0
     for pag in range(0,10):
         # st.write(pag)
         cn_list=driver.find_elements(by=By.CLASS_NAME,value='ranking-body')
@@ -41,7 +43,7 @@ if st.button('Clica para atualizar sa porra'):
         for j in range(0,len(cn_list2)):
             cn_list3.append(cn_list2[j].split('\n'))
 
-        for k in range(0,8):
+        for k in range(0,12):
             # st.write(k)
             # st.write(cn_list3)
             if cn_list3[k][0].isdigit():
