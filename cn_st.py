@@ -28,11 +28,11 @@ if st.button('Clica para atualizar sa porra'):
     # driver = webdriver.Chrome()
    
     driver.get("https://lol.qq.com/tft/#/rank/tier")
-    # driver.implicitly_wait(20)
+    driver.implicitly_wait(20)
 
     
     df_cn=pd.DataFrame([],columns=['Nick','PDL','Jogos','link'])
-    for pag in range(0,12):
+    for pag in range(0,10):
         # st.write(pag)
         cn_list=driver.find_elements(by=By.CLASS_NAME,value='ranking-body')
         cn_list2=cn_list[0].text.split('%\n')
