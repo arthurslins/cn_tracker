@@ -71,7 +71,7 @@ if st.button('Clica para atualizar sa porra'):
         
         next_page=driver.find_elements(by=By.CLASS_NAME,value='page-item')
         driver.implicitly_wait(20)
-        st.write(next_page)
+        st.write(next_page.text)
         next_page[-2].click()
         driver.implicitly_wait(20)
 
