@@ -34,8 +34,8 @@ if st.button('Clica para atualizar sa porra'):
     
     df_cn=pd.DataFrame([],columns=['Nick','PDL','Jogos','link'])
     
-    for pag in range(0,10):
-        st.write(pag)
+    for pagi in range(0,10):
+        st.write(pagi)
         cn_list=driver.find_elements(by=By.CLASS_NAME,value='ranking-body')
         cn_list2=cn_list[0].text.split('%\n')
         del cn_list2[1::2]
@@ -45,7 +45,7 @@ if st.button('Clica para atualizar sa porra'):
 
         for k in range(0,12):
             # st.write(k)
-            st.write(cn_list3)
+            # st.write(cn_list3)
             if cn_list3[k][0].isdigit():
                 del cn_list3[k][0]
 
@@ -72,6 +72,8 @@ if st.button('Clica para atualizar sa porra'):
         next_page=driver.find_elements(by=By.CLASS_NAME,value='page-item')
        
         next_page[-2].click()
+        driver.implicitly_wait(20)
+
     df_cn.reset_index(drop=True,inplace=True)
     df_cn.index+=1
     df_cn.to_csv('df.cn.csv',index=False)
