@@ -34,7 +34,7 @@ if st.button('Clica para atualizar sa porra'):
     
     df_cn=pd.DataFrame([],columns=['Nick','PDL','Jogos','link'])
     
-    for _ in range(5):
+    for _ in range(12):
         
         cn_list=driver.find_elements(by=By.CLASS_NAME,value='ranking-body')
         cn_list2=cn_list[0].text.split('%\n')
@@ -71,7 +71,7 @@ if st.button('Clica para atualizar sa porra'):
         
         next_page=driver.find_elements(by=By.CLASS_NAME,value='page-item')
         driver.implicitly_wait(20)
-        st.write(next_page.text)
+        st.write(next_page[0].text)
         next_page[-2].click()
         driver.implicitly_wait(20)
 
