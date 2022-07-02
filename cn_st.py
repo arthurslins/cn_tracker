@@ -33,9 +33,9 @@ if st.button('Clica para atualizar sa porra'):
 
     
     df_cn=pd.DataFrame([],columns=['Nick','PDL','Jogos','link'])
-    pag=0
+    
     for pag in range(0,10):
-        # st.write(pag)
+        st.write(pag)
         cn_list=driver.find_elements(by=By.CLASS_NAME,value='ranking-body')
         cn_list2=cn_list[0].text.split('%\n')
         del cn_list2[1::2]
