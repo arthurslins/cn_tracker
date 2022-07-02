@@ -37,14 +37,14 @@ if st.button('Clica para atualizar sa porra'):
         cn_list2=cn_list[0].text.split('%\n')
         del cn_list2[1::2]
         cn_list3=[]
-        for i in range(0,len(cn_list2)):
-            cn_list3.append(cn_list2[i].split('\n'))
+        for j in range(0,len(cn_list2)):
+            cn_list3.append(cn_list2[j].split('\n'))
 
-        for i in range(0,10):
-            print(i)
+        for k in range(0,10):
+            print(k)
             print(cn_list3)
-            if cn_list3[i][0].isdigit():
-                del cn_list3[i][0]
+            if cn_list3[k][0].isdigit():
+                del cn_list3[k][0]
 
         for i in range(0,len(cn_list3)):
        
