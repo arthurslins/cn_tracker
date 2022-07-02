@@ -29,7 +29,7 @@ if st.button('Clica para atualizar sa porra'):
     # driver = webdriver.Chrome()
    
     driver.get("https://lol.qq.com/tft/#/rank/tier")
-    # driver.implicitly_wait(20)
+    driver.implicitly_wait(20)
 
     
     df_cn=pd.DataFrame([],columns=['Nick','PDL','Jogos','link'])
