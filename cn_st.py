@@ -71,7 +71,7 @@ if st.button('Clica para atualizar sa porra'):
         
         next_page=driver.find_elements(by=By.CLASS_NAME,value='page-item')
        
-        next_page[-2].click()
+        next_page[-1].click()
         driver.implicitly_wait(20)
 
     df_cn.reset_index(drop=True,inplace=True)
