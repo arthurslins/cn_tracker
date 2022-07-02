@@ -44,8 +44,8 @@ if st.button('Clica para atualizar sa porra'):
             cn_list3.append(cn_list2[j].split('\n'))
 
         for k in range(0,10):
-            st.write(k)
-            st.write(cn_list3)
+            # st.write(k)
+            # st.write(cn_list3)
             if cn_list3[k][0].isdigit():
                 del cn_list3[k][0]
 
@@ -70,7 +70,8 @@ if st.button('Clica para atualizar sa porra'):
        
         
         next_page=driver.find_elements(by=By.CLASS_NAME,value='page-item')
-       
+        driver.implicitly_wait(20)
+        st.write(next_page)
         next_page[-2].click()
         driver.implicitly_wait(20)
 
