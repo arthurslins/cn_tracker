@@ -41,7 +41,7 @@ if st.button('Clica para atualizar sa porra'):
         for j in range(0,len(cn_list2)):
             cn_list3.append(cn_list2[j].split('\n'))
 
-        for k in range(0,10):
+        for k in range(0,8):
             # st.write(k)
             # st.write(cn_list3)
             if cn_list3[k][0].isdigit():
