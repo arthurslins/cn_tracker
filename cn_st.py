@@ -30,7 +30,7 @@ if st.button('Clica para atualizar sa porra'):
     driver.get("https://lol.qq.com/tft/#/rank/tier")
     # driver.implicitly_wait(20)
 
-
+    pag=0
     df_cn=pd.DataFrame([],columns=['Nick','PDL','Jogos','link'])
     for pag in range(0,12):
         st.write(pag)
