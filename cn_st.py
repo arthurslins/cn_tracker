@@ -41,19 +41,19 @@ if st.button('Clica para atualizar sa porra'):
             cn_list3.append(cn_list2[j].split('\n'))
 
         for k in range(0,10):
-            print(k)
-            print(cn_list3)
+            st.write(k)
+            st.write(cn_list3)
             if cn_list3[k][0].isdigit():
                 del cn_list3[k][0]
 
-        for i in range(0,len(cn_list3)):
+        for l in range(0,len(cn_list3)):
        
-            del cn_list3[i][1]
-            del cn_list3[i][3]
+            del cn_list3[l][1]
+            del cn_list3[l][3]
         url_list=driver.find_elements(by=By.CLASS_NAME,value='nickname')
         urls=[]
-        for i in range(0,10):
-            url_list[i].click()
+        for m in range(0,10):
+            url_list[m].click()
             urls.append(driver.current_url)
             driver.back()
 
